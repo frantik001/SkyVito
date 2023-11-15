@@ -1,12 +1,15 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
 import { Navigate, Outlet } from "react-router-dom";
+import PropTypes from "prop-types";
 
-export const ProtectedRoute = ({ redirectPath = "/", ...rest }) => {
-    if (!localStorage.getItem('access_token')) {
-        return <Navigate to={redirectPath} replace={true} />;
-    }
-    return <Outlet />;
+export const ProtectedRoute = ({ redirectPath = "/" }) => {
+  if (!localStorage.getItem("access_token")) {
+    return <Navigate to={redirectPath} replace={true} />;
+  }
+  return <Outlet />;
+};
+
+ProtectedRoute.propTypes = {
+  redirectPath: PropTypes.string,
 };
 
 export default ProtectedRoute;

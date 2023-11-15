@@ -1,16 +1,14 @@
-
-// import styled, { css } from "styled-components";
 import styled from "styled-components";
 
 export const Container = styled.div`
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 `;
 
 export const Header = styled.header`
-  background-color: #009EE4;
+  background-color: #009ee4;
 
   @media screen and (max-width: 620px) {
     width: 100%;
@@ -20,11 +18,11 @@ export const Header = styled.header`
     left: 0;
     top: 0;
     z-index: 3;
-    }
+  }
 `;
 
 export const HeaderNav = styled.nav`
-    max-width: 1178px;
+  max-width: 1178px;
   margin: 0 auto;
   padding: 0 10px;
   height: 79px;
@@ -36,7 +34,7 @@ export const HeaderNav = styled.nav`
     height: 55px;
     justify-content: start;
     padding: 0 20px;
-    }
+  }
 `;
 
 export const HeaderLogo = styled.div`
@@ -44,93 +42,94 @@ export const HeaderLogo = styled.div`
 
   @media screen and (max-width: 620px) {
     display: block;
-    }
+  }
 `;
 
 export const LogoMobLink = styled.div`
-    display: block;
-    width: 32px;
-    height: 32px;
+  display: block;
+  width: 32px;
+  height: 32px;
 `;
 
 export const LogoMobImg = styled.img`
-    width: 32px;
-    height: auto;
-    display: block;
-    -o-object-fit: cover;
-       object-fit: cover;
+  width: 32px;
+  height: auto;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
 `;
 
 export const HeaderBtnMainEnter = styled.button`
   width: 232px;
   height: 40px;
-    border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 6px;
   background-color: transparent;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 16px;
   line-height: 1;
+  transition: 0.3s;
 
   &:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid #FFFFFF;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid #ffffff;
   }
 
   @media screen and (max-width: 620px) {
-  display: none;
-    }
+    display: none;
+  }
 `;
 
 export const QuitAccount = styled.button`
   width: 232px;
   height: 40px;
   margin-left: 10px;
-    border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 6px;
   background-color: transparent;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 16px;
   line-height: 1;
+  transition: 0.3s;
 
   &:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid #FFFFFF;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid #ffffff;
   }
 
   @media screen and (max-width: 620px) {
-  display: none;
-    }
+    display: none;
+  }
 `;
-
 
 export const Main = styled.main`
   width: 224px;
   height: 40px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 6px;
   background-color: transparent;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 16px;
   line-height: 1;
 
   &:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid #FFFFFF;
-}
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid #ffffff;
+  }
 `;
 
 export const MainContainer = styled.div`
   max-width: 1178px;
   margin: 0 auto;
   padding: 0px 10px 79px;
- 
- @media screen and (max-width: 890px) {
+
+  @media screen and (max-width: 890px) {
     padding: 85px 0px 84px;
   }
 
   @media screen and (max-width: 620px) {
-  padding: 85px 0px 84px;
-    }
+    padding: 85px 0px 84px;
+  }
 `;
 
 export const MainCenterBlock = styled.div`
@@ -142,7 +141,7 @@ export const MainCenterBlock = styled.div`
   @media screen and (max-width: 620px) {
     margin: 0 auto;
     padding: 0 20px;
-    }
+  }
 `;
 
 export const MainMenu = styled.div`
@@ -155,8 +154,8 @@ export const MainMenu = styled.div`
   padding: 31px 10px 64px;
 
   @media screen and (max-width: 620px) {
-   display: none;
-    }
+    display: none;
+  }
 `;
 
 export const MenuLogoLink = styled.div`
@@ -178,16 +177,17 @@ export const MenuForm = styled.form`
 export const MenuBtn = styled.button`
   width: 241px;
   height: 50px;
-  background-color: #009EE4;
-  border: 1px solid #009EE4;
+  background-color: #009ee4;
+  border: 1px solid #009ee4;
   border-radius: 6px;
   font-size: 16px;
   line-height: 1;
-  color: #FFFFFF;
+  color: #ffffff;
+  transition: 0.3s;
 
   &:hover {
-  background-color: #0080C1;
-}
+    background-color: #0080c1;
+  }
 `;
 
 export const MainH2 = styled.h2`
@@ -202,7 +202,7 @@ export const MainH2 = styled.h2`
     line-height: 29px;
     color: #000000;
     margin-bottom: 20px;
-    }
+  }
 `;
 
 export const MainProfile = styled.div`
@@ -212,7 +212,7 @@ export const MainProfile = styled.div`
   @media screen and (max-width: 620px) {
     width: 100%;
     padding: 0 0 40px;
-    }
+  }
 `;
 
 export const ProfileContent = styled.div`
@@ -221,56 +221,56 @@ export const ProfileContent = styled.div`
   @media screen and (max-width: 890px) {
     max-width: 834px;
     width: 100%;
-    }
+  }
 `;
 
 export const ProfileTitle = styled.h3`
   margin-bottom: 20px;
   font-size: 32px;
-    line-height: 70px;
-    color: #000000;
+  line-height: 70px;
+  color: #000000;
 
-    @media screen and (max-width: 620px) {
-          font-size: 18px;
+  @media screen and (max-width: 620px) {
+    font-size: 18px;
     line-height: 1;
-      }
+  }
 `;
 
 export const ProfileSettings = styled.div`
   margin-bottom: 20px;
 
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
   @media screen and (max-width: 890px) {
-   flex-wrap: wrap;
-    }
+    flex-wrap: wrap;
+  }
 `;
 
 export const SettingsLeft = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 43px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 43px;
 
   @media screen and (max-width: 620px) {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-right: 0;
-    }
+  }
 `;
 
 export const SettingsImgContainer = styled.div`
   width: 170px;
   height: 170px;
   border-radius: 50%;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 
   @media screen and (max-width: 620px) {
     width: 132px;
     height: 132px;
-    }
+  }
 `;
 
 export const SettingsImg = styled.img`
@@ -282,9 +282,7 @@ export const SettingsImg = styled.img`
   border-radius: 50%;
 `;
 
-export const SettingsChangePhotoLable = styled.label`
-  
-`;
+export const SettingsChangePhotoLable = styled.label``;
 
 export const SettingsChangePhotoButton = styled.div`
   margin-top: 10px;
@@ -292,7 +290,7 @@ export const SettingsChangePhotoButton = styled.div`
   text-decoration: none;
   font-size: 16px;
   line-height: 24px;
-  color: #009EE4;
+  color: #009ee4;
   cursor: pointer;
 `;
 
@@ -300,7 +298,7 @@ export const SettingsChangePhoto = styled.input`
   opacity: 0;
   position: absolute;
   top: -9999px;
-  left: -9999px;  
+  left: -9999px;
 `;
 
 export const SettingsRight = styled.div`
@@ -308,19 +306,19 @@ export const SettingsRight = styled.div`
 
   @media screen and (max-width: 620px) {
     width: 100%;
-    }
+  }
 `;
 
 export const SettingsForm = styled.form`
   width: 630px;
   display: flex;
   flex-wrap: wrap;
-  
+
   @media screen and (max-width: 620px) {
     width: 100%;
     display: flex;
     flex-direction: column;
-    }
+  }
 `;
 
 export const SettingsDiv = styled.div`
@@ -330,22 +328,22 @@ export const SettingsDiv = styled.div`
   @media screen and (max-width: 620px) {
     display: inline-block;
     margin: 0 0px 18px;
-    }
+  }
 `;
 
 export const SettingsFormLabel = styled.label`
   font-size: 16px;
   line-height: 24px;
-  color: #C4C4C4;
+  color: #c4c4c4;
   margin-bottom: 4px;
   display: block;
 
   @media screen and (max-width: 620px) {
     font-size: 14px;
     line-height: 21px;
-    color: #C4C4C4;
+    color: #c4c4c4;
     margin-bottom: 6px;
-    }
+  }
 `;
 
 export const SettingsFormInput = styled.input`
@@ -395,20 +393,19 @@ export const SettingsFormInput = styled.input`
 `;
 
 export const SettingsPhoneInput = styled.input`
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   padding: 13px 19px;
   width: 614px;
-          &: focus {
-    border: 2px solid #009EE4;
-    } 
+  &: focus {
+    border: 2px solid #009ee4;
+  }
 
-    @media screen and (max-width: 620px) {
+  @media screen and (max-width: 620px) {
     border-radius: 30px;
     padding: 9px 17px;
     width: 100%;
-
   }
 
   &::-moz-placeholder {
@@ -420,8 +417,8 @@ export const SettingsPhoneInput = styled.input`
     line-height: 24px;
 
     @media screen and (max-width: 620px) {
-    font-size: 14px;
-    line-height: 21px;
+      font-size: 14px;
+      line-height: 21px;
     }
   }
 
@@ -434,8 +431,8 @@ export const SettingsPhoneInput = styled.input`
     line-height: 24px;
 
     @media screen and (max-width: 620px) {
-    font-size: 14px;
-    line-height: 21px;
+      font-size: 14px;
+      line-height: 21px;
     }
   }
 `;
@@ -447,12 +444,13 @@ export const SettingsBtn = styled.button`
   width: 154px;
   height: 50px;
   margin: 10px 7px 0;
-  background-color: ${props => props.active};
+  background-color: ${(props) => props.active};
   border-radius: 6px;
-  border: 1px solid ${props => props.active};
+  border: 1px solid ${(props) => props.active};
+  transition: 0.3s;
 
   &:hover {
-  background-color: ${props => props.activeHover};
+  background-color: ${(props) => props.activeHover};
   }
 
   @media screen and (max-width: 620px) {
@@ -466,14 +464,14 @@ export const SettingsBtn = styled.button`
 export const MainTitle = styled.h3`
   margin-bottom: 20px;
   font-size: 32px;
-    line-height: 70px;
-    color: #000000;
+  line-height: 70px;
+  color: #000000;
 
   @media screen and (max-width: 620px) {
     margin-bottom: 30px;
-        font-size: 18px;
+    font-size: 18px;
     line-height: 1;
-    }
+  }
 `;
 
 export const MainContent = styled.div`
@@ -491,19 +489,19 @@ export const ContentCards = styled.div`
   grid-gap: 40px 26px;
   justify-content: center;
   overflow-y: auto;
-  scrollbar-color: #FFFFFF #2E2E2E;
+  scrollbar-color: #ffffff #2e2e2e;
   scrollbar-width: thin;
   scrollbar-width: 0px;
   height: 441px;
 
   &::-webkit-scrollbar {
-  width: 0px;
-  background-color: #009EE4;
+    width: 0px;
+    background-color: #009ee4;
   }
 
   &::-webkit-scrollbar-thumb {
-  background-color: #0080C1;
-  border-radius: 3px;
+    background-color: #0080c1;
+    border-radius: 3px;
   }
 
   @media screen and (max-width: 1158px) {
@@ -514,7 +512,7 @@ export const ContentCards = styled.div`
   @media screen and (max-width: 890px) {
     display: grid;
     grid-template-columns: repeat(2, 270px);
-    }
+  }
 
   @media screen and (max-width: 620px) {
     display: grid;
@@ -523,7 +521,7 @@ export const ContentCards = styled.div`
     grid-gap: 10px 10px;
     justify-content: center;
     height: 596px;
-    }
+  }
 `;
 
 export const Cards = styled.div`
@@ -578,46 +576,44 @@ export const CardsCard = styled.div`
 export const CardImageContainer = styled.div`
   width: 270px;
   height: 270px;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 
   @media screen and (max-width: 620px) {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     width: 137px;
     height: 132px;
-    background-color: #D9D9D9;
-    }
+    background-color: #d9d9d9;
+  }
 `;
 
 export const CardContainer = styled.div`
   @media screen and (max-width: 620px) {
-   padding-left: 10px;
-    }
+    padding-left: 10px;
+  }
 `;
-
 
 export const CardImage = styled.img`
   width: 100%;
   height: 100%;
   display: block;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 
   @media screen and (max-width: 620px) {
-
     width: 100%;
     height: 100%;
     display: block;
     -o-object-fit: cover;
-       object-fit: cover;
-    }
+    object-fit: cover;
+  }
 `;
 
 export const CardTitle = styled.h3`
   height: 52px;
   font-size: 22px;
   line-height: 26px;
-  color: #009EE4;
+  color: #009ee4;
   margin-bottom: 10px;
   margin-top: 20px;
   overflow: hidden;
@@ -627,10 +623,10 @@ export const CardTitle = styled.h3`
     height: 51px;
     font-size: 14px;
     line-height: 17px;
-    color: #009EE4;
+    color: #009ee4;
     margin-bottom: 10px;
     margin-top: 10px;
-    }
+  }
 `;
 
 export const CardPrice = styled.p`
@@ -638,8 +634,8 @@ export const CardPrice = styled.p`
   font-size: 22px;
   line-height: 33px;
   margin-bottom: 10px;
- 
- @media screen and (max-width: 890px) {
+
+  @media screen and (max-width: 890px) {
     font-size: 16px;
     line-height: 24px;
   }
@@ -648,24 +644,24 @@ export const CardPrice = styled.p`
 export const CardPlace = styled.p`
   font-size: 16px;
   line-height: 21px;
-  color: #5F5F5F;
-   margin-bottom: 4px;
+  color: #5f5f5f;
+  margin-bottom: 4px;
 
-   @media screen and (max-width: 890px) {
+  @media screen and (max-width: 890px) {
     font-size: 12px;
     line-height: 16px;
-    color: #5F5F5F;
-}
+    color: #5f5f5f;
+  }
 `;
 
 export const CardDate = styled.p`
   font-size: 16px;
   line-height: 21px;
-  color: #5F5F5F;
+  color: #5f5f5f;
 
   @media screen and (max-width: 890px) {
-      font-size: 12px;
+    font-size: 12px;
     line-height: 16px;
-    color: #5F5F5F;
-    }
+    color: #5f5f5f;
+  }
 `;

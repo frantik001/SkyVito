@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Routes, Route } from "react-router-dom";
 import MainScreen from "./pages/main/main";
 import Login from "./pages/login/login";
@@ -9,12 +8,14 @@ import Seller from "./pages/seller/seller";
 import Addnewat from "./pages/modal/newADVT";
 import Reviews from "./pages/modal/reviews";
 import Settings from "./pages/modal/advsettings";
+import Error from "./pages/error/error";
 import ProtectedRoute from "./pages/ProtectedRoute/ProtectedRoute";
 
 export const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<MainScreen />} />
+      <Route path="*" element={<Error />} />
       <Route path="/login" element={<Login />} />
       <Route path="/registaration" element={<Registaration />} />
       <Route path="/product/:id" element={<Product />} />

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Footer = styled.footer`
   display: none;
 
-  @media screen and (max-width: ${props => props.media}) {
+  @media screen and (max-width: ${(props) => props.media}) {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -13,37 +13,36 @@ export const Footer = styled.footer`
     justify-content: center;
     height: 54px;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
-    }
+  }
 `;
 
 export const FooterContainer = styled.div`
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 54px;
-    width: 100%;
-    background-color: #FFFFFF;
-    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
-        display: flex;
-    justify-content: space-evenly;
-
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-evenly;
 `;
 
 export const FooterImgContainer = styled.div`
-    width: 42px;
-    height: 42px;
+  width: 42px;
+  height: 42px;
 `;
 
 export const FooterImg = styled.img`
-    width: 100%;
-    height: 100%;
-    display: block;
-    -o-object-fit: cover;
-       object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
 `;

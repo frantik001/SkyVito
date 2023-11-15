@@ -1,9 +1,8 @@
-/* eslint-disable no-unused-vars */
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const advtApi = createApi({
   reducerPath: "advtApi",
-  tagTypes: ['advt', 'comments'],
+  tagTypes: ["advt", "comments"],
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:8090/",
     prepareHeaders: (headers) => {
@@ -16,22 +15,21 @@ export const advtApi = createApi({
   }),
 
   endpoints: (builder) => ({
-
     getAlladvt: builder.query({
       query: () => "ads",
-      providesTags: ['advt']
+      providesTags: ["advt"],
     }),
 
     getAdvtComments: builder.query({
       query: (advtId) => `ads/${advtId}/comments`,
-      providesTags: ['comments']
+      providesTags: ["comments"],
     }),
 
     registerUser: builder.mutation({
       query: (userData) => ({
-        url: '/auth/register',
-        method: 'POST',
-        body: userData
+        url: "/auth/register",
+        method: "POST",
+        body: userData,
       }),
       transformResponse: (response) => {
         localStorage.setItem("user_register_id", response.id);
@@ -46,9 +44,9 @@ export const advtApi = createApi({
 
     loginUser: builder.mutation({
       query: (userData) => ({
-        url: '/auth/login',
-        method: 'POST',
-        body: userData
+        url: "/auth/login",
+        method: "POST",
+        body: userData,
       }),
 
       transformResponse: (response) => {
@@ -59,18 +57,18 @@ export const advtApi = createApi({
     }),
 
     getCurrentUser: builder.mutation({
-      query: () => 'user',
-      providesTags: ['advt']
+      query: () => "user",
+      providesTags: ["advt"],
     }),
 
     refreshToken: builder.mutation({
       query: () => ({
-        url: '/auth/login',
-        method: 'PUT',
+        url: "/auth/login",
+        method: "PUT",
         body: {
           access_token: localStorage.getItem("access_token"),
-          refresh_token: localStorage.getItem("refresh_token")
-        }
+          refresh_token: localStorage.getItem("refresh_token"),
+        },
       }),
       transformResponse: (response) => {
         localStorage.setItem("access_token", response.access_token);
@@ -81,36 +79,36 @@ export const advtApi = createApi({
 
     getCurrentUserAdvt: builder.query({
       query: () => "ads/me",
-      providesTags: ['advt']
+      providesTags: ["advt"],
     }),
 
     editUserData: builder.mutation({
       query: (userData) => ({
-        url: 'user',
-        method: 'PATCH',
-        body: userData
-      })
+        url: "user",
+        method: "PATCH",
+        body: userData,
+      }),
     }),
 
     uploadUserAvatar: builder.mutation({
       query: (formData) => ({
-        url: 'user/avatar',
-        method: 'POST',
+        url: "user/avatar",
+        method: "POST",
         body: formData,
       }),
       transformResponse: (response) => {
         localStorage.setItem("avatar", response.access_token);
         return response;
       },
-      invalidatesTags: ['advt']
+      invalidatesTags: ["advt"],
     }),
 
     uploaNewADVT: builder.mutation({
       query: (data) => {
         const searchParams = new URLSearchParams();
-        searchParams.append('title', data.get('title'));
-        searchParams.append('description', data.get('description'));
-        searchParams.append('price', data.get('price'));
+        searchParams.append("title", data.get("title"));
+        searchParams.append("description", data.get("description"));
+        searchParams.append("price", data.get("price"));
 
         const formData = new FormData();
 
@@ -118,84 +116,84 @@ export const advtApi = createApi({
         const length = arrData.length;
 
         for (let i = 1; i < length - 2; i++) {
-          formData.append('files', data.get(`image${i}`));
+          formData.append("files", data.get(`image${i}`));
         }
 
         return {
           url: `ads?${searchParams.toString()}`,
-          method: 'POST',
+          method: "POST",
           body: formData,
         };
       },
-      invalidatesTags: ['advt']
+      invalidatesTags: ["advt"],
     }),
 
     setComment: builder.mutation({
       query: ({ id, text }) => ({
         url: `ads/${id}/comments`,
-        method: 'POST',
+        method: "POST",
         body: { text },
       }),
-      invalidatesTags: ['comments']
+      invalidatesTags: ["comments"],
     }),
 
     getAdvtById: builder.query({
       query: (id) => `ads/${id}`,
-      providesTags: ['advt']
+      providesTags: ["advt"],
     }),
 
     editAdvtData: builder.mutation({
       query: (formData) => ({
         url: `ads/${formData.id}`,
-        method: 'PATCH',
+        method: "PATCH",
         body: formData,
       }),
-      invalidatesTags: ['advt']
+      invalidatesTags: ["advt"],
     }),
 
     addPhoto: builder.mutation({
       query: (addPhoto) => {
         const formData = new FormData();
-        formData.append('file', addPhoto.image);
+        formData.append("file", addPhoto.image);
 
         return {
           url: `ads/${addPhoto.id}/image`,
-          method: 'POST',
+          method: "POST",
           body: formData,
-        }
+        };
       },
-      invalidatesTags: ['advt']
+      invalidatesTags: ["advt"],
     }),
 
     deletePhoto: builder.mutation({
       query: (data) => {
-        const url = data.imgURL
-        const new_url = url.replace("http://localhost:8090/", "")
+        const url = data.imgURL;
+        const new_url = url.replace("http://localhost:8090/", "");
 
         return {
           url: `ads/${data.id}/image?file_url=${new_url}`,
-          method: 'DELETE',
-        }
+          method: "DELETE",
+        };
       },
-      invalidatesTags: ['advt']
+      invalidatesTags: ["advt"],
     }),
 
     getImg: builder.query({
-      query: (id) => `images/${id}`
+      query: (id) => `images/${id}`,
     }),
 
     deleteAdvt: builder.mutation({
       query: (id) => {
         const searchParams = new URLSearchParams();
-        searchParams.append('pk', id);
+        searchParams.append("pk", id);
         return {
           url: `ads/${id}`,
-          method: 'DELETE',
-        }
+          method: "DELETE",
+        };
       },
-      invalidatesTags: ['advt']
+      invalidatesTags: ["advt"],
     }),
-  })
+  }),
 });
 
 export const {
@@ -215,6 +213,5 @@ export const {
   useAddPhotoMutation,
   useDeletePhotoMutation,
   useGetImgQuery,
-  useDeleteAdvtMutation
+  useDeleteAdvtMutation,
 } = advtApi;
-
