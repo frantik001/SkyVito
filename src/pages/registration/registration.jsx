@@ -40,8 +40,6 @@ const Registration = () => {
   useEffect(() => {
     if (data) {
       navigate("/login", { replace: true });
-    } else {
-      console.log("ошибки!!!");
     }
   }, [data, navigate]);
 

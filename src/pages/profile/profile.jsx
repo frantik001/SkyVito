@@ -2,7 +2,6 @@ import Logo from "/img/logo.png";
 import LogoMob from "/img/logo-mob.png";
 import FooterAll from "../modal/footer";
 import CardsItem from "../modal/cardsitem";
-
 import { NavLink } from "react-router-dom";
 import { Wrapper, GlobalStyle } from "../../globalStyle";
 import {
@@ -13,6 +12,7 @@ import {
   useGetCurrentUserAdvtQuery,
 } from "../../services/servises";
 import { useState, useEffect } from "react";
+import Placeholder from "/img/NoImage.png";
 
 import {
   Container,
@@ -114,7 +114,6 @@ const Profile = () => {
     };
     fetchUserData();
   }, [getCurrentUser, refreshToken]);
-  
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -313,7 +312,11 @@ const Profile = () => {
                         price={item?.price}
                         place={currentUser?.city}
                         date={item.created_on?.split("T")[0]}
-                        picture={`http://localhost:8090/${item.images[0]?.url}`}
+                        picture={
+                          item.images[0]?.url
+                            ? `http://localhost:8090/${item.images[0]?.url}`
+                            : Placeholder
+                        }
                       />
                     ))}
                   </ContentCards>

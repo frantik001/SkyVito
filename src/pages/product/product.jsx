@@ -9,6 +9,7 @@ import {
 } from "../../services/servises";
 import { Wrapper, GlobalStyle } from "../../globalStyle";
 import { useState, useEffect } from "react";
+import Placeholder from '/img/NoImage.png';
 
 import {
   Container,
@@ -110,7 +111,11 @@ const Product = () => {
   }, [data, id]);
 
   useEffect(() => {
-    setSelectedImg(`http://localhost:8090/${adv?.images[0]?.url}`);
+    if (adv?.images[0]?.url) {
+      setSelectedImg(`http://localhost:8090/${adv?.images[0]?.url}`);
+    } else {
+      setSelectedImg(Placeholder);
+    }
   }, [adv]);
 
   return (

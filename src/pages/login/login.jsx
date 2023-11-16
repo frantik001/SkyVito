@@ -33,8 +33,6 @@ const Login = () => {
   useEffect(() => {
     if (data) {
       navigate("/profile", { replace: true });
-    } else {
-      console.log("ошибки!!!");
     }
   }, [data, navigate]);
   //-------------------------------------------------------------

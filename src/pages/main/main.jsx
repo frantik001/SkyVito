@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom";
 import FooterAll from "../modal/footer";
 import { useState, useEffect } from "react";
 import { useGetAlladvtQuery } from "../../services/servises";
+import Placeholder from "/img/NoImage.png";
 
 import {
   Container,
@@ -107,7 +108,11 @@ const MainScreen = () => {
                           price={item.price}
                           place={item.user.city}
                           date={item.created_on.split("T")[0]}
-                          picture={`http://localhost:8090/${item.images[0]?.url}`}
+                          picture={
+                            item.images[0]?.url
+                              ? `http://localhost:8090/${item.images[0]?.url}`
+                              : Placeholder
+                          }
                         />
                       ))
                     : searchResults.map((item) => (
@@ -118,7 +123,11 @@ const MainScreen = () => {
                           price={item.price}
                           place={item.user.city}
                           date={item.created_on.split("T")[0]}
-                          picture={`http://localhost:8090/${item.images[0]?.url}`}
+                          picture={
+                            item.images[0]?.url
+                              ? `http://localhost:8090/${item.images[0]?.url}`
+                              : Placeholder
+                          }
                         />
                       ))}
                 </ContentCards>
