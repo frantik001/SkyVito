@@ -3,6 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const advtApi = createApi({
   reducerPath: "advtApi",
   tagTypes: ["advt", "comments"],
+
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:8090/",
     prepareHeaders: (headers) => {
@@ -38,6 +39,7 @@ export const advtApi = createApi({
         localStorage.setItem("user_register_name", response.name);
         localStorage.setItem("user_register_surname", response.surname);
         localStorage.setItem("user_register_phone", response.phone);
+        localStorage.setrItem("user_register_password", response.password);
         return response;
       },
     }),

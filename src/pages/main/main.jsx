@@ -25,7 +25,7 @@ import {
   MainContainer,
   MainH2,
   MainContent,
-  ContentCards,
+  Cards,
 } from "./style/mainStyle";
 
 const MainScreen = () => {
@@ -98,7 +98,7 @@ const MainScreen = () => {
             <MainContainer>
               <MainH2>Объявления</MainH2>
               <MainContent>
-                <ContentCards>
+                <Cards>
                   {searchResults === ""
                     ? data.map((item) => (
                         <CardsItem
@@ -130,7 +130,7 @@ const MainScreen = () => {
                           }
                         />
                       ))}
-                </ContentCards>
+                </Cards>
               </MainContent>
             </MainContainer>
           </main>

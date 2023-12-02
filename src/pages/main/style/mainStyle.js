@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   max-width: 1440px;
   width: 100%;
+  min-height: 100vh;
   margin: 0 auto;
   background-color: #ffffff;
 
@@ -320,11 +321,9 @@ export const Cards = styled.div`
   grid-auto-rows: 441px;
   grid-gap: 40px 26px;
   justify-content: center;
-  overflow-y: auto;
   scrollbar-color: #FFFFFF #2E2E2E;
   scrollbar-width: thin;
   scrollbar-width: 0px;
-  height: 922px;
 
   &::-webkit-scrollbar {
   width: 0px;
