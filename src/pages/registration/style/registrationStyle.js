@@ -36,9 +36,7 @@ export const ModalBtnSignupEnt = styled.button`
 
 export const ContainerSignup = styled.div`
   max-width: 100%;
-  height: 100vh;
-  margin: 0 auto;
-  position: relative;
+  min-height: 100vh;
   background-color: #f4f5f6;
 `;
 

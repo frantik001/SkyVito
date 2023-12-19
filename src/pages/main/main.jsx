@@ -64,12 +64,15 @@ const MainScreen = () => {
         <Container>
           <Header>
             <HeaderNav>
-              <NavLink
-                to={localStorage.user_register_id ? `/profile` : `/login`}
-                replace
-              >
-                <HeaderBtnMainEnter>Вход в личный кабинет</HeaderBtnMainEnter>
-              </NavLink>
+              {localStorage.getItem("access_token") ? (
+                <NavLink to={`/profile`} replace>
+                  <HeaderBtnMainEnter>Личный кабинет</HeaderBtnMainEnter>
+                </NavLink>
+              ) : (
+                <NavLink to={`/login`} replace>
+                  <HeaderBtnMainEnter>Вход в личный кабинет</HeaderBtnMainEnter>
+                </NavLink>
+              )}
             </HeaderNav>
           </Header>
           <main>

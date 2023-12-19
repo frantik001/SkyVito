@@ -39,9 +39,9 @@ const Registration = () => {
 
   useEffect(() => {
     if (data) {
-      navigate("/login", { replace: true });
+      navigate("/", { replace: true });
     }
-  }, [data, navigate]);
+  });
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);

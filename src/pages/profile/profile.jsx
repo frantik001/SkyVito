@@ -202,7 +202,7 @@ const Profile = () => {
                     </NavLink>
                   </MenuForm>
                 </MainMenu>
-                <MainH2>Здравствуйте, {name}!</MainH2>
+                <MainH2>Здравствуйте, {currentUser && currentUser.name}!</MainH2>
                 <MainProfile>
                   <ProfileContent>
                     <ProfileTitle>Настройки профиля</ProfileTitle>
@@ -243,7 +243,7 @@ const Profile = () => {
                               id="settings-fname"
                               name="fname"
                               type="text"
-                              defaultValue={name}
+                              defaultValue={currentUser?.name}
                             />
                           </SettingsDiv>
                           <SettingsDiv>
@@ -255,7 +255,7 @@ const Profile = () => {
                               id="settings-fname"
                               name="fname"
                               type="text"
-                              defaultValue={surname}
+                              defaultValue={currentUser?.surname}
                             />
                           </SettingsDiv>
                           <SettingsDiv>
@@ -267,7 +267,7 @@ const Profile = () => {
                               id="settings-fname"
                               name="fname"
                               type="text"
-                              defaultValue={city}
+                              defaultValue={currentUser?.city}
                             />
                           </SettingsDiv>
                           <SettingsDiv>
@@ -279,7 +279,7 @@ const Profile = () => {
                               id="settings-fname"
                               name="fname"
                               type="text"
-                              defaultValue={phone}
+                              defaultValue={currentUser?.phone}
                             />
                           </SettingsDiv>
                           <SettingsBtn

@@ -450,7 +450,7 @@ export const SettingsBtn = styled.button`
   transition: 0.3s;
 
   &:hover {
-  background-color: ${(props) => props.activeHover};
+  background-color: ${(props) => props.activehover};
   }
 
   @media screen and (max-width: 620px) {

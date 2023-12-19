@@ -7,13 +7,19 @@ export const GlobalStyle = createGlobalStyle`
   src: url("/fonts/Roboto-Regular.ttf");
 }
 
-  * {
+* {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  outline: none;
-  }
+}
+
+h1,
+h2,
+h3,
+button,
+body {
+  font-family: "Roboto", "sans-serif";
+}
 
   *:before,
   *:after {
@@ -37,26 +43,15 @@ export const GlobalStyle = createGlobalStyle`
   list-style: none;
   }
 
-  html,
-  body {
-  width: 100%;
-  height: 100%;
-  font-family: 'Roboto', sans-serif;
-  color: #000000;
-  box-sizing: border-box;
-  }
-
   div,
   button,
-  a {
+  a,
+  body {
   font-family: 'Roboto', sans-serif;
   }
 `;
 
 export const Wrapper = styled.div`
-  width: 100%;
-  min-height: 100%;
-  overflow: hidden;
   background-color: #f1f1f1;
   display: -webkit-box;
   display: -ms-flexbox;
